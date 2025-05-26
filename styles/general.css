@@ -1,0 +1,10 @@
+body {  
+    margin: 0;
+    padding-top: 70px;
+    padding-left: 240px;
+    padding-right: 24px;
+    background-color: rgb(232, 228, 228);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    position: relative;
+
+}
