@@ -6,7 +6,8 @@
     <title>TODO-list</title>
     <link rel="stylesheet" href="styles/general.css">
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/main-body.css">
+    <link rel="stylesheet" href="styles/create-item.css">
+    <link rel="stylesheet" href="styles/todo-list-box.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -24,8 +25,8 @@
         <img class="header-image" src="images/transparaent-header-image.png" alt="">
         <div class="header-right-section">
             <span>Sort by:</span>
-            <button class="header-buttons">Pirority</button>
-            <button class="header-buttons">Order</button>
+            <button class="header-buttons">Priority</button>
+            <button class="header-buttons">Date</button>
 
         </div>
         
@@ -33,10 +34,22 @@
 
     </header>
     <main>
-        <section>
+        <section class="create-list-item-section">
+            <p class="create-list-item-header">CREATE ITEM ON LIST</p>
+            <form id="list-creation-form">
+                <input type="text" name="item-name" placeholder="Name of TODO" required>
+                <input type="date" name="item-date-start" placeholder="When are you starting the TODO?" required>
+                <input type="date" name="item-name-end" placeholder="Due date of TODO" required>
+                <input type="time" name="item-duration" placeholder="How long is this going to take?" required>
+                <input type="number" name="item-priority" placeholder="Priority on a scale of 1-10"  min="1" max="10" step="1" required>
+                <button type="submit">Submit</button>
+
+
+            </form>
+
 
         </section>
-        <section>
+        <section class="list-items-container">
 
         </section>
 
