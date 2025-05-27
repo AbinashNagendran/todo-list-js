@@ -8,7 +8,8 @@
     left: 0;
     right: 0;
     background-color: rgb(238, 221, 198);
-    border: none;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
 }
 
 .header-title {
@@ -23,9 +24,10 @@
 
 .header-buttons {
     font-weight: 600;
-    width: 80px;
+    width: 100px;
     border-radius: 10px;
 }
+
 
 .header-image {
     width: 7.5%;
