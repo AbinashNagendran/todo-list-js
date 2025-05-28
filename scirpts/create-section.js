@@ -6,7 +6,14 @@ let id_counter = JSON.parse(localStorage.getItem('id_counter')) || 0;
 const form = document.querySelector('.list-creation-form'); 
 export let items =  JSON.parse(localStorage.getItem('items')) || [];
 
-renderList();
+
+if (items.length > 0){
+  renderList();
+}
+else {
+  id_counter = 0;
+}
+
 
 
 form.addEventListener('submit', function (event) {
@@ -20,19 +27,32 @@ form.addEventListener('submit', function (event) {
   items.push(list_item);
   
 
-  console.log(list_item); 
   saveToStorage();
   renderList(); 
 
 });
 
-console.log(items);
 
-function saveToStorage() {
+export function saveToStorage() {
     localStorage.setItem('items', JSON.stringify(items));
     localStorage.setItem('id_counter', JSON.stringify(id_counter));
 }
 
+
+export function removeFromList(id) {
+    const newList = [];
+    let newQuantity = 0;
+
+    items.forEach((item) => {
+        if (item.id !== Number(id)) {
+            newList.push(item);
+            newQuantity++;
+        }
+    });
+    items = newList;
+    saveToStorage();
+    return newQuantity;
+}
 
 
 
