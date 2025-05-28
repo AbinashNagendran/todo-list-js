@@ -42,67 +42,26 @@
         <section class="create-list-item-section">
             <p class="create-list-item-header">CREATE ITEM ON LIST</p>
             <form class="list-creation-form">
-                <input type="text" name="item-name" placeholder="Name of TODO" required>
-                <input type="date" name="item-date-start" placeholder="When are you starting the TODO?" required>
-                <input type="date" name="item-name-end" placeholder="Due date of TODO" required>
-                <span>How long is this going to take?</span>
+                <input type="text" name="name" placeholder="Name of TODO" required>
+                <input type="date" name="date_start" placeholder="When are you starting the TODO?" required>
+                <input type="date" name="date_end" placeholder="Due date of TODO" required>
+                <span>How long is this going to take? (Optional)</span>
                 <input type="number" name="hours" min="0" placeholder="Hours">
                 <input type="number" name="minutes" min="0" max="59" placeholder="Minutes">
-                <input type="number" name="item-priority" placeholder="Priority on a scale of 1-10"  min="1" max="10" step="1" required>
-                <textarea name="item-desciption" cols="50" rows="10" placeholder="Description of TODO"></textarea>
-                <button type="submit" class="submit-button">Submit</button>
+                <input type="number" name="priority" placeholder="Priority on a scale of 1-10"  min="1" max="10" step="1" required>
+                <textarea name="desciption" cols="50" rows="10" placeholder="Description of TODO"></textarea>
+                <button type="submit" class="submit-button">SUBMIT</button>
             </form>
 
 
         </section>
         <section class="list-items-container">
             <p class="create-list-item-header">THE LIST</p>
-            <div class="list-item">
-                <header>Finish this website</header>
-                <div class="list-item-content">
-                    <div class="list-item-desciption">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas quasi perferendis fugiat voluptatem! Deserunt explicabo molestias eveniet tempore reiciendis eum quidem iste minima neque, magnam dolorum nostrum ea facilis.</p>
-                        <button class="action-buttons"><h3>UNCOMPLETED</h3></button>
-                        <button class="action-buttons"><h3>ANNIHILATE</h3></button>
-                    </div>
-                    <div class="list-item-details">
-                        <p>Start Date: 2025-05-27 </p>
-                        <p>Due Date: 2025-06-01 </p>
-                        <p>Duration: </p>
-                        <p>Priority: </p>
-                    </div>
-                </div>
-
-            </div>
-            <div class="list-item">
-                <header>Finish this website</header>
-                <div class="list-item-content">
-                    <div class="list-item-desciption">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas quasi perferendis fugiat voluptatem! Deserunt explicabo molestias eveniet tempore reiciendis eum quidem iste minima neque, magnam dolorum nostrum ea facilis.</p>
-                        <button class="action-buttons"><h3>UNCOMPLETED</h3></button>
-                        <button class="action-buttons"><h3>ANNIHILATE</h3></button>
-
-                    </div>
-                    <div class="list-item-details">
-                        <p>Start Date: 2025-05-27 </p>
-                        <p>Due Date: 2025-06-01 </p>
-                        <p>Duration: </p>
-                        <p>Priority: </p>
-                    </div>
-                </div>
-
-            </div>
 
         </section>
 
     </main>
-    
-
-
-
-
-
-
-    <script type="module" src="scirpts/main-page.js"></script>
+    <script type="module" src="scirpts/create-section.js"></script>
+    <script type="module" src="scirpts/manage-list.js"></script>
 </body>
 </html>

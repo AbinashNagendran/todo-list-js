@@ -40,3 +40,50 @@
 .action-buttons { 
     width: 150px;
 }
+
+
+.action-buttons {
+    background-color: white;
+    border-color: rgb(41, 118, 211);
+    border-style: solid;
+    border-width: 2px;
+    color: rgb(41, 118, 211);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.action-buttons h3 {
+    margin: 3px;
+}
+.action-buttons:hover {
+    background-color: rgb(41, 118, 211);
+    color: white;
+}
+.action-buttons:active {
+    opacity: 0.7;
+}
+
+
+.complete {
+    border-color: rgb(38, 213, 58);
+    color: rgb(38, 213, 58);
+}
+
+.complete:hover {
+    background-color: rgb(38, 213, 58);
+    color: white;
+}
+.destroy {
+    border-color: rgb(210, 12, 12);
+    color: rgb(210, 12, 12);
+
+}
+
+.destroy:hover {
+    background-color: rgb(210, 12, 12);
+    color: white;
+}
