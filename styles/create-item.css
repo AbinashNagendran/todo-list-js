@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: stretch;
     height: 250px;
     margin-top: 10px;
 }
@@ -31,9 +32,17 @@
     margin-bottom: 10px;
 }
 
+.list-creation-form textarea {
+    padding-bottom: 20px;
+}
+
 
 .submit-button:click {
     background-color: bisque;
+}
+
+.list-creation-form span {
+    font-size: 12px;
 }
 
 

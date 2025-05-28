@@ -24,10 +24,14 @@
         </div>
         <img class="header-image" src="images/transparaent-header-image.png" alt="">
         <div class="header-right-section">
-            <span>Sort by:</span>
-            <button class="header-buttons">Priority</button>
-            <button class="header-buttons">Date Added</button>
-            <button class="header-buttons">Due date</button>
+            <div>
+                <span>Sort by:</span>
+                <button class="header-buttons">Priority</button>
+                <button class="header-buttons">Date Added</button>
+                <button class="header-buttons">Due date</button>
+            </div>
+            <button class="dark-mode-button"><strong>Dark Mode</strong> 🌑</button>
+
 
         </div>
         
@@ -41,9 +45,11 @@
                 <input type="text" name="item-name" placeholder="Name of TODO" required>
                 <input type="date" name="item-date-start" placeholder="When are you starting the TODO?" required>
                 <input type="date" name="item-name-end" placeholder="Due date of TODO" required>
-                <input type="time" name="item-duration" placeholder="How long is this going to take?" required>
+                <span>How long is this going to take?</span>
+                <input type="number" name="hours" min="0" placeholder="Hours">
+                <input type="number" name="minutes" min="0" max="59" placeholder="Minutes">
                 <input type="number" name="item-priority" placeholder="Priority on a scale of 1-10"  min="1" max="10" step="1" required>
-                <textarea name="item-desciption" cols="30" rows="10" placeholder="Description of TODO"></textarea>
+                <textarea name="item-desciption" cols="50" rows="10" placeholder="Description of TODO"></textarea>
                 <button type="submit" class="submit-button">Submit</button>
             </form>
 
@@ -51,8 +57,41 @@
         </section>
         <section class="list-items-container">
             <p class="create-list-item-header">THE LIST</p>
+            <div class="list-item">
+                <header>Finish this website</header>
+                <div class="list-item-content">
+                    <div class="list-item-desciption">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas quasi perferendis fugiat voluptatem! Deserunt explicabo molestias eveniet tempore reiciendis eum quidem iste minima neque, magnam dolorum nostrum ea facilis.</p>
+                        <button class="action-buttons"><h3>UNCOMPLETED</h3></button>
+                        <button class="action-buttons"><h3>ANNIHILATE</h3></button>
+                    </div>
+                    <div class="list-item-details">
+                        <p>Start Date: 2025-05-27 </p>
+                        <p>Due Date: 2025-06-01 </p>
+                        <p>Duration: </p>
+                        <p>Priority: </p>
+                    </div>
+                </div>
 
-            
+            </div>
+            <div class="list-item">
+                <header>Finish this website</header>
+                <div class="list-item-content">
+                    <div class="list-item-desciption">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed voluptas quasi perferendis fugiat voluptatem! Deserunt explicabo molestias eveniet tempore reiciendis eum quidem iste minima neque, magnam dolorum nostrum ea facilis.</p>
+                        <button class="action-buttons"><h3>UNCOMPLETED</h3></button>
+                        <button class="action-buttons"><h3>ANNIHILATE</h3></button>
+
+                    </div>
+                    <div class="list-item-details">
+                        <p>Start Date: 2025-05-27 </p>
+                        <p>Due Date: 2025-06-01 </p>
+                        <p>Duration: </p>
+                        <p>Priority: </p>
+                    </div>
+                </div>
+
+            </div>
 
         </section>
 
