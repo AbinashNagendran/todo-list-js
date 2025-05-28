@@ -1,12 +1,26 @@
 .list-items-container {
-    background-color: lightblue;
-    position: fixed;
-    top: 120px;
-    left: 500px;
-    right: 40px;
+    background-color: rgba(249, 235, 189, 0.893);
     padding: 10px;
+    width: 800px;
+
+    top: 20px;
+    margin-left: 350px;
+    margin-right: auto;
+    margin-right: 50px;
+    margin-top: 50px;
+
     
 
+
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 5px;
+    
+
+}
+
+.create-list-item-header {
+    margin-bottom: 15px;
 }
 
 .list-item {
@@ -18,12 +32,30 @@
     border-style: solid;
     border-radius: 5px;
     padding: 10px;
+    background-color: rgb(243, 205, 200);
     
 }
+.list-item header {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+.list-item-done {
+    background-color: rgb(200, 243, 201);
+
+}
+
 
 .list-item-content { 
     display: grid;
     grid-template-columns: 2fr 1fr;
+
+}
+.list-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
 
@@ -31,14 +63,16 @@
     border-width: 2px;
     border-style: solid;
     border-radius: 5px;
-    margin: 2px;
+    margin: 8px;
     padding: 5px;
+    text-align: center;
+
 
 }
 
 
 .action-buttons { 
-    width: 150px;
+    width: 160px;
 }
 
 
@@ -76,6 +110,7 @@
 .complete:hover {
     background-color: rgb(38, 213, 58);
     color: white;
+    
 }
 .destroy {
     border-color: rgb(210, 12, 12);
@@ -86,4 +121,15 @@
 .destroy:hover {
     background-color: rgb(210, 12, 12);
     color: white;
+}
+
+.list-item-desciption p {
+    width: 300px;
+    word-wrap: break-word;
+}
+
+.list-item-desciption {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pushes items apart vertically */
 }

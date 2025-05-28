@@ -8,14 +8,16 @@ export function renderList() {
             <div class="list-item-content">
                 <div class="list-item-desciption">
                     <p>${item.desciption}</p>
-                    <button class="action-buttons complete"><h3>UNCOMPLETED</h3></button>
-                    <button class="action-buttons destroy js-delete-link" data-item-id="${item.id}"><h3>ANNIHILATE</h3></button>
+                    <div>
+                        <button class="action-buttons complete"><h3>COMPLETED?</h3></button>
+                        <button class="action-buttons destroy js-delete-link" data-item-id="${item.id}"><h3>ANNIHILATE</h3></button>
+                    </div>
                 </div>
                 <div class="list-item-details">
-                    <p>Start Date: ${item.date_start}</p>
-                    <p>Due Date: ${item.date_end}</p>
-                    <p>Duration: ${item.hours}h ${item.minutes}m</p>
-                    <p>Priority: ${item.priority}</p>
+                    <p><strong>Start Date:</strong> ${item.date_start}</p>
+                    <p><strong>Due Date:</strong> ${item.date_end}</p>
+                    <p><strong>Duration:</strong> ${item.hours}h ${item.minutes}m</p>
+                    <p><strong>Priority:</strong> ${item.priority}</p>
                 </div>
             </div>
         </div>
