@@ -21,9 +21,10 @@ form.addEventListener('submit', function (event) {
 
   const formData = new FormData(form); 
   const list_item = Object.fromEntries(formData.entries()); 
+  console.log(list_item);
   list_item.id = id_counter; 
   id_counter++;
-  list_item.status = 'UNCOMPLETED';
+  list_item.status = 'uncompleted';
   items.push(list_item);
   
 

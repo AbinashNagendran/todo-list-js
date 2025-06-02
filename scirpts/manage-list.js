@@ -3,13 +3,13 @@ export function renderList() {
     let listHTML = `<p class="create-list-item-header">THE LIST(${items.length})</p>`;
     items.forEach((item) => {
         listHTML+= `
-        <div class="list-item js-item-container-${item.id}">
+        <div class="list-item-${item.status} js-item-container-${item.id}">
             <header>${item.name}</header>
             <div class="list-item-content">
-                <div class="list-item-desciption">
-                    <p>${item.desciption}</p>
+                <div class="list-item-desciption list-item-desciption-${item.id}">
+                    <p>${item.description}</p>
                     <div>
-                        <button class="action-buttons complete"><h3>COMPLETED?</h3></button>
+                        <button class="action-buttons complete js-complete-link" data-item-id="${item.id}"><h3>COMPLETED?</h3></button>
                         <button class="action-buttons destroy js-delete-link" data-item-id="${item.id}"><h3>ANNIHILATE</h3></button>
                     </div>
                 </div>
@@ -37,11 +37,27 @@ export function renderList() {
             renderList();
             document.querySelector('.create-list-item-header').innerText = `THE LIST (${newQuantity})`;
         }
-
-
-
     });
 
+  });
+
+  document.querySelectorAll('.js-complete-link').forEach((link) => {
+    link.addEventListener('click', () => {
+        const itemId = link.dataset.itemId;
+
+        
+        
+        items.forEach((item) => {
+            if (item.id == itemId) {
+                item.status = 'completed';
+                localStorage.setItem('items', JSON.stringify(items));
+                renderList();
+            }
+
+
+        });
+        
+    });
   });
 }
 
